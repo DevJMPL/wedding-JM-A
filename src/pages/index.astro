@@ -1,0 +1,249 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Juan Manuel & Areli — Invitación</title>
+    <meta name="description" content="Invitación de boda — 17 de enero de 2026" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="is-locked">
+    <!-- Lluvia (solo gate) -->
+    <canvas id="rain-canvas" aria-hidden="true"></canvas>
+
+    <!-- Pétalos (solo contenido abierto) -->
+    <canvas id="fx-canvas" aria-hidden="true"></canvas>
+
+    <div class="paper" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- SOBRE CERRADO -->
+    <div class="gate" data-gate>
+      <div class="gate__wrap" data-gate-wrap>
+        <div class="envelope3d" data-envelope aria-label="Sobre cerrado">
+          <div class="env env--back"></div>
+
+          <div class="env env--paper">
+            <div class="env__panels" aria-hidden="true">
+              <span class="panel panel--bottom"></span>
+              <span class="panel panel--left"></span>
+              <span class="panel panel--right"></span>
+              <span class="panel panel--edge"></span>
+            </div>
+
+            <div class="env__seal" aria-hidden="true"></div>
+          </div>
+
+          <div class="env env--flap env--flap-closed" data-flap aria-hidden="true"></div>
+          <div class="env__shine" aria-hidden="true"></div>
+        </div>
+
+        <!-- Botón debajo del sobre -->
+        <div class="gate__actions">
+          <button class="btn-primary" data-open>ABRIR INVITACIÓN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <main class="page" data-page>
+      <header class="topbar" data-reveal>
+        <div class="container topbar__inner">
+          <div class="brand">
+            <div class="brand__mark">JM</div>
+            <div class="brand__meta">
+              <div class="brand__title">Invitación de boda</div>
+              <div class="brand__sub">Juan Manuel & Areli</div>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <a class="nav__link" href="#inicio">Inicio</a>
+            <a class="nav__link" href="#historia">Historia</a>
+            <a class="nav__link" href="#ceremonia">Ceremonia</a>
+            <a class="nav__link" href="#galeria">Galería</a>
+            <a class="nav__link" href="#guia">Palabras</a>
+          </nav>
+        </div>
+      </header>
+
+      <section id="inicio" class="hero2 section">
+        <div class="container hero2__grid">
+          <div class="hero2__copy" data-reveal>
+            <p class="kicker">Con la bendición de Dios</p>
+            <h1 class="title">JUAN MANUEL <span class="amp">&</span> ARELI</h1>
+            <p class="lede text-justify">
+              Nos casamos y nos encantaría compartir contigo este momento especial.
+            </p>
+
+            <div class="chips" data-reveal>
+              <span class="chip">17 de enero, 2026</span>
+              <span class="chip">3:00 PM</span>
+              <span class="chip">Iglesia Príncipe de Paz</span>
+              <span class="chip">Taxadho, Ixmiquilpan</span>
+            </div>
+
+            <div class="cta" data-reveal>
+              <a class="btn-soft" href="#ceremonia">Ver ceremonia</a>
+              <a class="btn-ghost" href="#galeria">Ver galería</a>
+            </div>
+          </div>
+
+          <div class="hero2__media" data-reveal>
+            <figure class="hero2__figure">
+              <img
+                class="hero2__img"
+                src="/images/placeholder-hero.jpg"
+                alt="Foto de boda (temporal)"
+                loading="eager"
+              />
+              <div class="hero2__overlay" aria-hidden="true"></div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="historia" class="section editorial">
+        <div class="container">
+          <div class="editorial__grid">
+            <div class="editorial__media card" data-reveal>
+              <img
+                src="/images/couple-watercolor.png"
+                alt="Juan Manuel y Areli"
+                class="editorial__img"
+                loading="lazy"
+              />
+              <div class="editorial__wash" aria-hidden="true"></div>
+            </div>
+
+            <div class="editorial__text" data-reveal>
+              <h2 class="h2">UN COMIENZO NUEVO</h2>
+              <p class="text-justify muted">
+                Un estilo limpio, elegante y luminoso. Conforme deslizas, cada sección aparece suavemente para contar la historia de este día.
+              </p>
+
+              <div class="quoteCard card" data-reveal>
+                <p class="quote text-justify">
+                  El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece;
+                  no hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor; no se goza de la injusticia, mas se goza de la verdad.
+                  Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.
+                </p>
+                <p class="small">1 Corintios 13:4–7 — RVR1960</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ceremonia" class="section">
+        <div class="container">
+          <h2 class="h2" data-reveal>CEREMONIA</h2>
+
+          <div class="grid2">
+            <div class="card panel" data-reveal>
+              <h3 class="h3">Detalles</h3>
+              <ul class="list text-justify">
+                <li><strong>Fecha:</strong> 17 de enero, 2026</li>
+                <li><strong>Hora:</strong> 3:00 PM</li>
+                <li><strong>Templo:</strong> Iglesia Príncipe de Paz</li>
+                <li><strong>Ubicación:</strong> Taxadho, Ixmiquilpan, Hidalgo</li>
+              </ul>
+            </div>
+
+            <div class="card panel panel--softpink" data-reveal>
+              <h3 class="h3">Promesa</h3>
+              <p class="quote text-justify">
+                Encomienda a Jehová tu camino, y confía en él; y él hará.
+              </p>
+              <p class="small">Salmos 37:5 — RVR1960</p>
+            </div>
+          </div>
+
+          <div class="map card" data-reveal>
+            <div class="map__header">
+              <h3 class="h3">Ubicación</h3>
+              <p class="map__sub text-justify">
+                Iglesia Príncipe de Paz — Taxadho, Ixmiquilpan, Hidalgo
+              </p>
+            </div>
+
+            <div class="map__frame" aria-label="Mapa de la ubicación">
+              <iframe
+                title="Mapa — Iglesia Príncipe de Paz, Taxadho, Ixmiquilpan"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Iglesia%20Pr%C3%ADncipe%20de%20Paz%20Taxadho%20Ixmiquilpan%20Hidalgo&output=embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="section gallery">
+        <div class="container">
+          <h2 class="h2" data-reveal>GALERÍA</h2>
+          <p class="lede muted text-justify" data-reveal>
+            Imágenes temporales de boda. Después solo cambia los <strong>src</strong> por las fotos finales.
+          </p>
+
+          <div class="gallery__grid" data-reveal>
+            <a class="gallery__item" href="javascript:void(0)" aria-label="Foto temporal 1">
+              <img src="/images/placeholder-1.jpg" alt="Foto temporal 1" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="javascript:void(0)" aria-label="Foto temporal 2">
+              <img src="/images/placeholder-2.jpg" alt="Foto temporal 2" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="javascript:void(0)" aria-label="Foto temporal 3">
+              <img src="/images/placeholder-3.jpg" alt="Foto temporal 3" loading="lazy" />
+            </a>
+            <a class="gallery__item" href="javascript:void(0)" aria-label="Foto temporal 4">
+              <img src="/images/placeholder-4.jpg" alt="Foto temporal 4" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="guia" class="section">
+        <div class="container">
+          <h2 class="h2" data-reveal>PALABRAS QUE NOS GUÍAN</h2>
+
+          <div class="stack">
+            <article class="card panel" data-reveal>
+              <p class="quote text-justify">
+                Mejores son dos que uno; porque tienen mejor paga de su trabajo... y cordón de tres dobleces no se rompe pronto.
+              </p>
+              <p class="small">Eclesiastés 4:9–12 — RVR1960</p>
+            </article>
+
+            <article class="card panel panel--softpink" data-reveal>
+              <p class="quote text-justify">
+                Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto.
+              </p>
+              <p class="small">Colosenses 3:14 — RVR1960</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer section" data-reveal>
+        <div class="container footer__inner">
+          <p class="footer__line">Con cariño,</p>
+          <p class="footer__names">Juan Manuel & Areli</p>
+        </div>
+      </footer>
+    </main>
+
+    <script type="module" src="/src/scripts/animations.ts"></script>
+  </body>
+</html>
