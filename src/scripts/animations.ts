@@ -69,7 +69,6 @@ function seedRain() {
 function rainTick() {
   if (!rainCanvas || !rainCtx || !rainRunning) return;
 
-  // si ya no existe gate, detenemos
   if (!document.querySelector("[data-gate]")) {
     rainRunning = false;
     rainCtx.clearRect(0, 0, rW, rH);
@@ -120,7 +119,7 @@ type Petal = {
 };
 
 const canvas = document.getElementById("fx-canvas") as HTMLCanvasElement | null;
-const ctx = canvas?.getContext("2d");
+const ctx = canvas?.getContext("2d") ?? null;
 
 let W = 0;
 let H = 0;
@@ -238,7 +237,6 @@ function startPetals() {
 function openInvitation() {
   if (!gate || !page || !flap || !envelope || !openBtn) return;
 
-  // MUY IMPORTANTE: al abrir siempre te deja arriba
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 
   const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -256,7 +254,7 @@ function openInvitation() {
       0.70
     )
     .add(() => {
-      unlock(); // agrega is-open (activa pétalos y apaga lluvia vía CSS)
+      unlock();
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       startPetals();
     }, 0.72)
@@ -294,5 +292,4 @@ window.addEventListener("resize", () => {
   seedPetals();
 });
 
-/** init rain */
 initRain();
