@@ -169,7 +169,7 @@ import "../styles/global.css";
             </div>
           </div>
 
-          <!-- MAPA: compatible Android/iOS + fallback -->
+          <!-- MAPA: Android/iOS robusto + fallback -->
           <div class="map card" data-reveal>
             <div class="map__header">
               <h3 class="h3">Ubicación</h3>
@@ -180,7 +180,7 @@ import "../styles/global.css";
               <div class="map__actions">
                 <a
                   class="btn-soft"
-                  href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Pr%C3%ADncipe%20de%20Paz%20Taxadho%20Ixmiquilpan%20Hidalgo"
+                  href="https://maps.app.goo.gl/n3hr6BsRcdmtcLKF9"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -195,10 +195,9 @@ import "../styles/global.css";
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen
-                src="https://www.google.com/maps?&q=Iglesia%20Pr%C3%ADncipe%20de%20Paz%20Taxadho%20Ixmiquilpan%20Hidalgo&output=embed"
+                src="https://www.google.com/maps?q=20.432643,-99.1506854&z=17&output=embed"
               ></iframe>
 
-              <!-- Mensaje por si el WebView bloquea el iframe -->
               <div class="map__fallback">
                 Si el mapa no carga en tu navegador, usa <strong>“Abrir en Google Maps”</strong>.
               </div>
@@ -261,7 +260,6 @@ import "../styles/global.css";
       </footer>
     </main>
 
-    <!-- Script correcto para Astro (evita 404 en Vercel) -->
     <script>
       import "../scripts/animations";
     </script>
