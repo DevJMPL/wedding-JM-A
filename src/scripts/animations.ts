@@ -293,3 +293,22 @@ window.addEventListener("resize", () => {
 });
 
 initRain();
+
+/* =======================
+   CAROUSEL CONTROLS
+======================= */
+const track = document.querySelector<HTMLElement>("[data-carousel]");
+const prevBtn = document.querySelector<HTMLElement>(".carousel__btn--left");
+const nextBtn = document.querySelector<HTMLElement>(".carousel__btn--right");
+
+if (track && prevBtn && nextBtn) {
+  const scrollAmount = () => track.clientWidth * 0.8;
+
+  prevBtn.addEventListener("click", () => {
+    track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
+  });
+
+  nextBtn.addEventListener("click", () => {
+    track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+  });
+}
